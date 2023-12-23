@@ -1,0 +1,31 @@
+<HTML>
+	<HEAD><TITLE>Using DIV Tag</TITLE></HEAD>
+	<BODY>
+		<SCRIPT Language="Javascript">
+			function computer_onmouseover() {
+				text1.style.visibility = "visible";
+				computer.style.visibility = "visible";
+				text2.style.visibility = "hidden";
+				balloon.style.visibility = "hidden";
+			}
+			function everyone_onmouseout() {
+				text1.style.visibility = "visible";
+				computer.style.visibility = "visible";
+				text2.style.visibility = "visible";
+				balloon.style.visibility = "visible";
+			}
+			function balloon_onmouseover() {
+				text1.style.visibility = "hidden";
+				computer.style.visibility = "hidden";
+				text2.style.visibility = "visible";
+				balloon.style.visibility = "visible";
+			}
+		</SCRIPT>
+		<DIV Style="visibility:visible;text-align:center;" onmouseover="computer_onmouseover();" onmouseout="everyone_onmouseout();">
+			<SPAN ID="text1" Style="color:blue;font-family:sans-serif;">For the Picture below to disappear move the mouse over this picture</SPAN>
+			<P><IMG ID="computer" Src="Images/computer.gif" Height="200" Width="200" />
+		</DIV><DIV Style="visibility:visible;text-align:center;" onmouseover="balloon_onmouseover();" onmouseout="everyone_onmouseout();">
+			<SPAN ID="text2" Style="color:blue;font-family:sans-serif;">For the above Picture to disappear move the mouse over this picture</SPAN>
+			<P><IMG ID="balloon" Src="Images/balloon.gif" Height="200" Width="200" /></DIV>
+	</BODY>
+</HTML>
